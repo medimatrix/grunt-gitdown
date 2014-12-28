@@ -1,0 +1,5 @@
+```js
+function() {
+	return true
+}
+```

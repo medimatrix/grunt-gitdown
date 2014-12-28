@@ -40,6 +40,7 @@
     "gruntplugin"
   ],
   "dependencies": {
+    "fs-extra": "^0.13.0",
     "gitdown": "^1.2.6"
   }
 }
