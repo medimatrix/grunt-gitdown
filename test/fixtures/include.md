@@ -1,3 +1,3 @@
 # Test
 
-{"gitdown": "include", "file": "./test/fixtures/to-include.md"}
+{"gitdown": "include", "file": "./to-include.md"}
