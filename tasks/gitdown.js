@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 			fse.ensureFileSync(f.dest)
 
 			gitdown.writeFile(f.dest).then(function() {
-				grunt.log.writeln("File '" + f.dest + "' created.")
+				grunt.log.writeln(`File ${f.dest} created.`)
 				done()
 			}).catch(function(err) {
 				grunt.log.warn(err)
