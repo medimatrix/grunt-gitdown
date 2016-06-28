@@ -1,9 +1,8 @@
-<!--
-This file has been generated using Gitdown (https://github.com/gajus/gitdown).
-Direct edits to this will be be overwritten. Look for Gitdown markup file under ./.gitdown/ path.
--->
+<h1 id="test">Test</h1>
+
 ```js
 function() {
 	return true
 }
 ```
+

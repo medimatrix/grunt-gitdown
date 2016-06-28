@@ -9,7 +9,7 @@
 var fse = require("fs-extra")
 var Gitdown = require("gitdown")
 
-// We have to do some weird stuff because gitdown uses Objec.defineProperty
+// We have to do some weird stuff because gitdown uses Object.defineProperty
 //  on gitdown.config to validate stuff
 function setConfig(gitdown, options) {
 	var config = gitdown.config
@@ -23,6 +23,7 @@ function setConfig(gitdown, options) {
 
 module.exports = function(grunt) {
 	grunt.registerMultiTask("gitdown", "Run gitdown using grunt", function() {
+		var done = this.async()
 		// Merge task-specific and/or target-specific options with these defaults
 		var options = this.options({})
 
@@ -43,8 +44,10 @@ module.exports = function(grunt) {
 			gitdown.write(f.dest).then(function() {
 				// Success!
 				grunt.log.writeln("File '" + f.dest + "' created.")
+				done()
 			}).catch(function(err) {
 				grunt.log.warn(err)
+				done(false)
 			})
 		})
 	})
